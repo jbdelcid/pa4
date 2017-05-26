@@ -1,0 +1,29 @@
+/**
+ * Name: Taylor Lew and Niral Patel
+ * Date: November 29, 2016
+ * PA #: 4
+ * Extension writeup
+ */
+
+The problem our extension solves is determining if two friends can be connected 
+in some way through mutual friends.  The data set consists of pairs of numbers 
+which represent the friends.  We solved this problem by creating a graph with 
+an unordered_map which included the friend number as the key and a pointer
+to the node/friend as its value.  After we load in all of the friends
+that are in the data set, we call finding which uses DFS to search for 
+the end friend.  Each level that is traversed will increment the height
+in order to figure out the number of connections for the search.  We tested it 
+using the big data set that we download and we created a smaller data set to
+make sure it all worked. It gives you the amount of friends if you used DFS
+not the optimal one. Thus, the amount of connections it prints out tells you
+there are X amount of connections or less. It will show that there is at least
+some sort of connection between the two friends. 
+
+The smaller data set we created is called smallCases.tsv and a list of pairs
+that can be tested is in extPairs.tsv.
+
+Link to the data file:
+https://archive.org/details/oxford-2005-facebook-matrix
+
+How to run the program:
+./extension dataSetFile pairFile outputFile
